@@ -14,6 +14,10 @@ class AdminController extends Controller
 
     }
 
+  public function home(){
+  return view('admin.template.index');
+   }
+
     //read all sliders
     public function read_all_sliders(){
 

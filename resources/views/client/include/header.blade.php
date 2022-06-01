@@ -29,17 +29,17 @@
                     <ul>
                         <li>
                             <i class="fa fa-envelope-o"></i>
-                            <span class="top-title">info@example.com</span>
+                            <span class="top-title">vecteur.plus@yahoo.fr</span>
                         </li>
                         <!-- End: Opening time -->
                         <li>
                             <i class="fa fa-phone"></i>
-                            <span class="top-title">+234 567 234 875</span>
+                            <span class="top-title">+237 6 75 75 94 82</span>
                         </li>
                         <!-- End: Opening time -->
                         <li>
                             <i class="fa fa-clock-o"></i>
-                            <span class="top-title">Mon-Fri: 8:00 - 16:00</span>
+                            <span class="top-title">Lundi-vendredi: 8:30 - 18:00</span>
                         </li>
                         <!-- End: Opening time -->
 
@@ -56,30 +56,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                
                 <div class="repire_logo">
-                    <a href="#"><img src="{{asset('frontend/images/logo.png')}}" alt="Riamend"></a>
+                    <a href="#"><img src="{{asset('frontend/images/logo.jpg')}}"  alt="Riamend"></a>
+                
                 </div>
                 <div id="navigation">
                     <ul>
                         <li><a class="active" href="{{URL::to('/')}}">Accueil</a>
                         </li>
-                        <li><a class="active" href="{{URL::to('/services')}}">Services</a>
-                        </li>
+                      
                         <li><a href="{{URL::to('/rent-a-wifi')}}" style="font-size:17px; color:rebeccapurple;font-weight: bold;">Louer un Mifi</a>
                         </li>
                         <li class="has-sub"><a href="{{URL::to('/solutions')}}" title="page">Solutions Pro</a>
                             <ul>
-                                <li><a href="index-two.html" title="Home">Home Two</a>
                                 <li><a href="gallery.html" title="Gallery">Wifi pour conference</a>
                                 </li>
                                 <li><a href="single-gallery.html" title="Gallery">Wifi pour entreprise</a>
                                 </li>
-                                <li><a href="services.html" title="Services">Services</a>
-                                </li>
-                                <li><a href="single-services.html" title="Services">sin</a>
-                                </li>
-                                <li><a href="team.html" title="Team">Team Page</a>
-                                </li>
+                                <li><a href="{{URL::to('/services')}}" title="Services">Services</a></li>
+                                
                             </ul>
                             </li>
                         </li>

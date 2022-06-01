@@ -12,11 +12,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-xs-12">
-                                <h5>Pokpok Repair</h5>
-                                <h2> Need repair service </h2>
-                                <p>Call us to get a free quote now </p>
+                                {{-- <h5>Vecteur+ technologies</h5> --}}
+                                <h2>Externalisation de vos services informatiques</h2>
+                                
                                 <div class="slider_btn">
-                                    <a href="#quote" class="more-link slider_btn_one">send quote</a>
+                                    <a href="#quote" class="more-link slider_btn_one">commandez</a>
                                 </div>
                             </div>
                         </div>
@@ -32,11 +32,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-xs-12">
-                                <h5>Pokpok Repair</h5>
-                                <h2> Fix your laptop </h2>
-                                <p>Call us to get a free quote now </p>
+                                {{-- <h5>Vecteur+ technologies</h5> --}}
+                                <h2>Externalisation de vos services informatiques</h2>
+                                
                                 <div class="slider_btn">
-                                    <a href="#quote" class="more-link slider_btn_one">send quote</a>
+                                    <a href="#quote" class="more-link slider_btn_one">commandez</a>
                                 </div>
                             </div>
                         </div>
@@ -59,14 +59,17 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="abut_title">
-                    <h2>We're here to help you mobile repair service</h2>
-                    <p>Attended no do thoughts me on dis suade scarcely after own are pret on yot spring suffer old denote his budy proposal speedily mr strikg amto nut attention tended no do after thoughts me on dissuade </p>
-                    <div class="about_list_itm">
+                    <h2 style="text-align: center">  
+                         Services Informatiques 
+                        </h2>
+                        <p style="text-align: center"> Offre de service</p>
+                     <div class="about_list_itm">
                         <ul>
-                            <li>Unlimited over the phone assistance</li>
-                            <li>Hard drive defragmentation</li>
-                            <li>Refurbished Technology Sales</li>
-                            <li>Computer Technology Sales</li>
+                            <li>Vous êtes une entreprise, une association. </li>
+                            <li>Vous ne disposez pas d’un service informatique interne. </li>
+                            <li>Vous en offrir un, est coûteux ! </li>
+                            <li>Alors externalisez votre service informatique ! </li>
+                            <li>Confiez  la  résolution  de  vos  problèmes  informatique à  vecteur+ technologies </li>
                         </ul>
                     </div>
                 </div>
@@ -91,8 +94,11 @@
     <div class="container">
         <!-- Start: Heading -->
         <div class="base-header">
-            <h2> Our Services</h2>
-            <p>Service features tended no do thoughts me on dissuade scarcely own are pretty spring suffer old denote his proposal speedily amr striking am now .</p>
+            <h2> Nos services informatiques</h2>
+            <p>VECTEUR+ TECHNOLOGIES 
+                Est une entreprise de services informatiques et télécoms. 
+                Spécialisée dans les réseaux LAN, WAN, WIFI ET FIBRE OPTIQUE, l’entreprise héberge aussi les 
+                serveurs de messageries et les sites web.</p>
         </div>
         <!-- End:  heading -->
         <div class="row">
