@@ -55,7 +55,7 @@ class ServiceController extends Controller
         $service->service_status = 1;
         $service->save();
         Toastr::success("le service $service->service_title a bien été  ajouter :)", 'Success');
-        return redirect('/services');
+        return redirect('/admin/services');
     }
 
     
@@ -66,7 +66,7 @@ class ServiceController extends Controller
         $service->service_status = 0;
         $service->update();
         Toastr::warning("le service a été désactiver avec succès :)", 'Success');
-        return redirect('/services');
+        return redirect('/admin/services');
     }
 
 
@@ -76,7 +76,7 @@ class ServiceController extends Controller
         $service->service_status = 1;
         $service->update();
         Toastr::success("le service a été activer  avec succès :)", 'Success');
-        return redirect('/services');
+        return redirect('/admin/services');
     }
 
 
@@ -89,7 +89,7 @@ class ServiceController extends Controller
 
         $service->delete();
         Toastr::success("le service a été supprimer avec succès :)", 'Success');
-        return redirect('/services');
+        return redirect('/admin/services');
     }
 
 
@@ -144,6 +144,6 @@ class ServiceController extends Controller
 
         $service->update();
         Toastr::success("le service a été modifier avec succès :)", 'Success');
-        return redirect('/services');
+        return redirect('/admin/services');
     }
 }

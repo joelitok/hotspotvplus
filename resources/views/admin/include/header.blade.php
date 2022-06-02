@@ -15,10 +15,10 @@
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="{{URL::to('/services')}}">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{URL::to('/orders')}}">Commandes</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{URL::to('/sliders')}}">Slides</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{URL::to('/users')}}">Utilisateurs</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/services')}}">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/orders')}}">Commandes</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/sliders')}}">Slides</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/users')}}">Utilisateurs</a></li>
 
           </ul>
         </div>
@@ -32,7 +32,7 @@
         </a>
         <div class="collapse" id="tables">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{URL::to('/mifi')}}">Mifi</a></li>               
+            <li class="nav-item"> <a class="nav-link" href="{{URL::to('/admin/mifi')}}">Mifi</a></li>               
           </ul>
         </div>
       </li>

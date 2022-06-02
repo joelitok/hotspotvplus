@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Slider;
+use App\Models\Service;
 class ClientController extends Controller
 {
     
     
 public function home() {
-return view('client.template.home');
-                           }
+$sliders=Slider::where('slider_status',1)->orderBy('id', 'DESC')->get();    
+return view('client.template.home')->with('sliders', $sliders);
+                           }                           
 public function rentAwifi(){
 return view('client.template.rentAwifi');
 }
@@ -23,7 +25,12 @@ return view('client.template.contact');
 }
 
 public function services(){
-return view('client.template.services');   
+$services=Service::where('service_status', 1)->orderBy('id','DESC')->get();    
+return view('client.template.services')->with('services', $services);  
+}
+
+public function service_detail(){
+return view('client.template.servicedetail');
 }
 
 

@@ -6,63 +6,35 @@
     <div class="container">
         <!-- Start: Heading -->
         <div class="base-header">
-            <h2> Our Services</h2>
-            <p>Service features tended no do thoughts me on dissuade scarcely own are pretty spring suffer old denote his proposal speedily amr striking am now .</p>
+            <h2> Nos service informatiques</h2>
+            <p>vecteur+ technologies 
+est une entreprise de services informatiques et télécoms. 
+spécialisée dans les réseaux lan, wan, wifi et fibre optique, l’entreprise héberge aussi les 
+serveurs de messageries et les sites web.</p>
         </div>
         <!-- End:  heading -->
         <div class="row">
             <div class="owl-carousel owl-theme col-md-12" id="servic">
+             @if($services)
+             @forelse ($services as $service)
+                  <!--/Item -->
                 <div class="serv_list">
                     <div class="service_img">
-                        <img alt="team" class="img-responsive" src="{{asset('frontend/images/service1.jpg')}}">
+                        <img alt="team" class="img-responsive" src="{{asset('/service_images/'.$service->service_image)}}">
                     </div>
                     <div class="service_para">
                         <a href="services.html">
-                            <h3>network services</h3>
+                            <h3>{{$service->service_title}}</h3>
                         </a>
-                        <p>Attended no do thoughts meonof after suade sca rcely own are pret to spring diss auade scarcely own are </p>
-                        <a class="serv_read" href="services.html">read  more</a>
+                        <p>{{\Illuminate\Support\Str::limit($service->service_description, 100, $end='...')}}</p>
+                        <a class="serv_read" href="{{URL::to('/service-detail')}}">voir plus</a>
                     </div>
                 </div>
-                <!--/Item -->
-                <div class="serv_list">
-                    <div class="service_img">
-                        <img alt="team" class="img-responsive" src="{{asset('frontend/images/service2.jpg')}}">
-                    </div>
-                    <div class="service_para">
-                        <a href="services.html">
-                            <h3>Apple services</h3>
-                        </a>
-                        <p>Attended no do thoughts meonof after suade sca rcely own are pret to spring diss auade scarcely own are </p>
-                        <a class="serv_read" href="services.html">read  more</a>
-                    </div>
-                </div>
-                <!--/Item -->
-                <div class="serv_list">
-                    <div class="service_img">
-                        <img alt="team" class="img-responsive" src="{{asset('frontend/images/service3.jpg')}}">
-                    </div>
-                    <div class="service_para">
-                        <a href="services.html">
-                            <h3>laptop service</h3>
-                        </a>
-                        <p>Attended no do thoughts meonof after suade sca rcely own are pret to spring diss auade scarcely own are </p>
-                        <a class="serv_read" href="services.html">read  more</a>
-                    </div>
-                </div>
-                <div class="serv_list">
-                    <div class="service_img">
-                        <img alt="team" class="img-responsive" src="{{asset('frontend/images/service1.jpg')}}">
-                    </div>
-                    <div class="service_para">
-                        <a href="services.html">
-                            <h3>mobile service</h3>
-                        </a>
-                        <p>Attended no do thoughts meonof after suade sca rcely own are pret to spring diss auade scarcely own are </p>
-                        <a class="serv_read" href="services.html">read  more</a>
-                    </div>
-                </div>
-                <!--/Item -->
+             @empty
+                 
+             @endforelse
+                 
+             @endif  
             </div>
         </div>
         <!---/.row -->
@@ -95,81 +67,5 @@
 </section>
 <!--  End: Call to action  Section
 ==================================================-->
-
-
-   <!-- Start: Pricing Section 
-==================================================-->
-<section class="pricing-section pricing_serv_pg">
-    <!-- container -->
-    <div class="container">
-        <!-- Start: Heading -->
-        <div class="base-header">
-            <h2>Our Special Plan</h2>
-            <p>Service features tended no do thoughts me on dissuade scarcely own are pretty spring suffer old denote his proposal speedily amr striking am now .</p>
-        </div>
-        <!-- End:  heading -->
-        <div class="row">
-            <div class="col-md-4 col-xs-12">
-                <!-- Start: pricing-box 1 -->
-                <div class="pricing-box">
-                    <div class="pricing_heading">
-                        <h3>Basic plan</h3>
-                        <h2><span>$</span>40.00</h2>
-                    </div>
-                    <ul>
-                        <li> <i class="icon_box-checked"></i>One-time Repair</li>
-                        <li><i class="icon_box-checked"></i> Regular Repair</li>
-                        <li> <i class="icon_box-checked"></i>Move-ins / Outs</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="#" class="more-link">order now</a>
-                    </div>
-                </div>
-                <!-- End: pricing-box 1 -->
-            </div>
-            <div class="col-md-4 col-xs-12">
-                <!-- Start: pricing-box 1 -->
-                <div class="pricing-box">
-                    <div class="pricing_heading">
-                        <h3>Repair plan</h3>
-                        <h2><span>$</span>70.00</h2>
-                    </div>
-                    <ul>
-                        <li> <i class="icon_box-checked"></i>One-time Repair</li>
-                        <li><i class="icon_box-checked"></i> Regular Repair</li>
-                        <li> <i class="icon_box-checked"></i>Move-ins / Outs</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="#" class="more-link">order now</a>
-                    </div>
-                </div>
-                <!-- End: pricing-box 1 -->
-            </div>
-            <div class="col-md-4 col-xs-12">
-                <!-- Start: pricing-box 1 -->
-                <div class="pricing-box">
-                    <div class="pricing_heading">
-                        <h3>Install plan</h3>
-                        <h2><span>$</span>90.00</h2>
-                    </div>
-                    <ul>
-                        <li> <i class="icon_box-checked"></i>One-time Repair</li>
-                        <li><i class="icon_box-checked"></i> Regular Repair</li>
-                        <li> <i class="icon_box-checked"></i>Move-ins / Outs</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="#" class="more-link">order now</a>
-                    </div>
-                </div>
-                <!-- End: pricing-box 1 -->
-            </div>
-        </div>
-        <!--/ row -->
-    </div>
-    <!--/ container -->
-</section>
-<!--End: Pricing Section 
-==================================================-->
-
 
 @endsection

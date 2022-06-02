@@ -24,7 +24,7 @@
                 @endif
                 <div class="card-body">
                     <div class="row">
-                        <h4 class="card-title col-10">Liste des Services</h4>
+                        <h4 class="card-title col-10">Liste des Sliders</h4>
                         {{-- data-toggle="modal" data-target="#exampleModal" --}}
                         <button class="btn btn-outline-primary mb-4" data-toggle="modal" data-target="#exampleModal">
                             Ajouter
@@ -36,13 +36,13 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Nouveau service</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Nouveau slider</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="post" action="{{ url('/admin/service_add_save') }}"
+                                    <form method="post" action="{{ url('/admin/slider_add_save') }}"
                                         enctype="multipart/form-data">
                                         @csrf
                                         <div class="card">
@@ -69,7 +69,7 @@
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" maxlength="25" type="text"
-                                                            name="service_title" required>
+                                                            name="slider_title" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -77,7 +77,7 @@
                                                         <label class="col-form-label">Description:</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" type="text" name="service_description"
+                                                        <input class="form-control" type="text" name="slider_description"
                                                             required>
                                                     </div>
                                                 </div>
@@ -86,7 +86,7 @@
                                                         <label class="col-form-label">Image</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" name="service_image" type="file"
+                                                        <input class="form-control" name="slider_image" type="file"
                                                             required>
                                                     </div>
                                                 </div>
@@ -127,19 +127,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if ($services)
-                                            @forelse ($services as $service)
+                                        @if ($sliders)
+                                            @forelse ($sliders as $slider)
 
                                                 <tr>
                                                     <td>{{ $inc }}</td>
                                                     <td><img
-                                                            src="/service_images/{{$service->service_image}}">
+                                                            src="/slider_images/{{$slider->slider_image}}">
                                                     </td>
-                                                    <td>{{ $service->service_title }}</td>
-                                                    <td>{{ $service->created_at->format('d/m/Y   H:i:s') }}</td>
+                                                    <td>{{ $slider->slider_title }}</td>
+                                                    <td>{{ $slider->created_at->format('d/m/Y   H:i:s') }}</td>
 
                                                     <td>
-                                                        @if ($service->service_status == 1)
+                                                        @if ($slider->slider_status == 1)
                                                             <label class="badge badge-success"> Activé</label>
                                                         @else
                                                             <label class="badge badge-danger"> Desactivé</label>
@@ -148,25 +148,25 @@
                                                     </td>
                                                     <td>
                                                         <a title="Modifier"
-                                                            onclick="window.location='{{ url('/admin/service_update_save/' . $service->id) }}'">
+                                                            onclick="window.location='{{ url('/admin/slider_update_save/' . $slider->id) }}'">
                                                             <i class="ti-pencil-alt"> </i></a>
                                                     </td>
 
                                                     <td>
                                                         <a title="Supprimer"
-                                                            href="{{ url('/admin/delete_service/' . $service->id) }}"
+                                                            href="{{ url('/admin/delete_slider/' . $slider->id) }}"
                                                             id="delete">
                                                             <i class="ti-trash"></i></a>
                                                     </td>
                                                     <td>
-                                                        @if ($service->service_status == 1)
+                                                        @if ($slider->slider_status == 1)
                                                             <button class="btn btn-outline-warning"
-                                                                onclick="window.location='{{ url('/admin/disable_service/' . $service->id) }}'">
+                                                                onclick="window.location='{{ url('/admin/disable_slider/' . $slider->id) }}'">
                                                                 désactiver
                                                             </button>
                                                         @else
                                                             <button class="btn btn-outline-success"
-                                                                onclick="window.location='{{ url('/admin/enable_service/' . $service->id) }}'">
+                                                                onclick="window.location='{{ url('/admin/enable_slider/' . $slider->id) }}'">
                                                                 activer
                                                             </button>
                                                         @endif
@@ -178,7 +178,7 @@
                                             @empty
                                                 <tr>
                                                     <td colspan="6" style="text-align: center">
-                                                        <H1> Aucun service Ajouter</H1>
+                                                        <H1> Aucun slider Ajouter</H1>
                                                     </td>
                                                 </tr>
 
@@ -188,8 +188,9 @@
 
 
                                     </tbody>
+                                    
                                 </table>
-                                {{ $services->links('pagination.paginatelinks') }}
+                                {{ $sliders->links('pagination.paginatelinks') }}
                             </div>
                         </div>
                     </div>

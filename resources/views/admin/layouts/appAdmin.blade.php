@@ -239,6 +239,19 @@
    </div>
    <!-- page-body-wrapper ends -->
  </div>
+ <script>
+  $(document).on("click", "#delete", function (e) {
+      e.preventDefault();
+      var link = $(this).attr("href");
+      bootbox.confirm("Voulez-vous vraiment supprimer cet element ?", function (confirmed) {
+          if (confirmed) {
+              window.location.href = link;
+
+          }
+          ;
+      });
+  });
+</script>
  <!-- container-scroller -->
  <!-- plugins:js -->
  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
@@ -259,6 +272,7 @@
  <!-- Custom js for this page-->
  <script src="{{asset('backend/js/data-table.js')}}"></script>
  <!-- End custom js for this page-->
+
 </body>
 
 </html>
