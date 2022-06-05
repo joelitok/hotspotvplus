@@ -45,10 +45,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
+ 
 </head>
 
 <body>
-
+    {{-- @include('sweet::alert') --}}
+    @include('sweetalert::alert')
     <!-- ::::::::::::::::::::::::::: Start: Preloader section ::::::::::::::::::::::::::: -->
     <div id="preloader"></div>
     <!-- ::::::::::::::::::::::::::: End: Preloader section ::::::::::::::::::::::::::: -->

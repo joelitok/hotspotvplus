@@ -18,6 +18,7 @@
             <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/services')}}">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/orders')}}">Commandes</a></li>
             <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/sliders')}}">Slides</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/tariffs')}}">Tariffs</a></li>
             <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/users')}}">Utilisateurs</a></li>
 
           </ul>

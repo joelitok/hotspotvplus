@@ -5,6 +5,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\TariffController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +24,12 @@ Route::get('/admin',[AdminController::class,'home']);
 
 //client view
 Route::get('/',[ClientController::class,'home']);
-Route::get('/rent-a-wifi',[ClientController::class,'rentAwifi']);
+Route::get('/rent-a-wifi/{id?}',[ClientController::class,'rentAwifi']);
 Route::get('/solutions',[ClientController::class,'solutions']);
 Route::get('/services',[ClientController::class,'services']);
 Route::get('/service-detail',[ClientController::class,'service_detail']);
 Route::get('/contactez',[ClientController::class,'contactez']);
-
+Route::post('/order_add_save',[ClientController::class,'order_add_save']);
 
 //service manager image
 Route::prefix('admin')->group(function(){
@@ -50,8 +51,19 @@ Route::get('/disable_slider/{id}', [SliderController::class, 'disable_slider']);
 
 
 
-});
+//manager tariff 
+Route::get('/tariffs', [TariffController::class, 'tariffs']);
+Route::get('/delete_tariff/{id}', [TariffController::class, 'delete_tariff']);
+Route::post('/tariff_add_save', [TariffController::class, 'tariff_add_save']);
+Route::post('/update_tariff', [TariffController::class, 'update_tariff']);
+Route::get('/enable_tariff/{id}', [TariffController::class, 'enable_tariff']);
+Route::get('/disable_tariff/{id}', [TariffController::class, 'disable_tariff']);
 
+
+
+
+
+});
 
 
 

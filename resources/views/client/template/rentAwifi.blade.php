@@ -3,9 +3,10 @@
     <!-- Start: About Section 
 ==================================================-->
 <section class="about_sec_2">
+    
     <div class="container">
         <div class="row">
-            <div class="col-md-8">    
+            <div class="col-md-6">
                 <div class="abut_title">
                     <h2>We're here to help you mobile repair service</h2>
                     <p>Attended no do thoughts me on dissuade scarcely own are prettyot spring suffer old denote his budy proposal speedily mr striking amto nut attention   tended no do after thoughts me on dissuade scarcely own are prettyot spring suffer old denote his budy proposal speedily mr striking amto nut attention ctttended no do thoughts me on  </p>
@@ -24,36 +25,96 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                 <div class="contact-form">
-                    <form method="post" action="mailer.php" id="contact-form">
+            </div> 
+            <div class="col-md-6">
+                <!--  Contact Form  -->
+                <div class="contact-form">
+                    <form method="post" action="{{ url('/order_add_save') }}"
+                                        enctype="multipart/form-data" id="contact-form">
+                                        @csrf
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="col-md-12">
-                                    <input class="con-field" name="name" id="name" type="text" placeholder="Name">
-                                </div>
-                                <div class="col-md-12">
-                                    <input class="con-field" name="email" id="email" type="text" placeholder="Email">
-                                </div>
-                                <div class="col-md-12">
-                                    <input class="con-field" name="messageForm" id="messageForm" type="text" placeholder="Interest of service">
-                                </div>
-                                <div class="col-md-12">
-                                    <textarea class="con-field" name="message" id="message" rows="6" placeholder="Your Message"></textarea>
-                                    <div class="submit-area">
-                                        <input type="submit" id="submit-contact" class="btn-alt" value="Send quote">
-                                        <div id="msg" class="message"></div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label style="font-size:14px">DATE DE DEBUT</label>  
+                                    </div>
+                                    <div class="col">
+                                        <input class="con-field" name="dateStart"  type="date" placeholder="Date de début">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-md-12">
+                             <div class="row">
+                                 <div class="col ">
+                                    <label style="font-size:14px">DATE DE FIN</label> 
+                                 </div>
+                                 <div class="col">
+                                    <input class="con-field" name="dateEnd"  type="date" placeholder="Date de fin">
+                             
+                                 </div>
+                             </div>
+                          
+                                 
+                            
+                            </div>
+                           
+
+                                <div class="col-md-12">
+                                    <input class="con-field" name="order_name" id="name" type="text" placeholder="Nom">
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="con-field" name="order_email" id="email" type="text" placeholder="Email">
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="con-field" name="order_phone" id="phone" type="text" placeholder="Numéro de télephone">
+                                </div>
+                                <div class="col-md-12">
+                                    <select name="order_forfait_name" class="con-field">
+                                      @isset($tariff)
+                                      <option>{{$tariff->tariff_name}}</option>   
+                                      @endisset
+                                        
+                                      
+                                     @if($tariffs)
+                                     @foreach ($tariffs as $tarifItem)
+                                     @isset($tariff)
+                                          @if($tariff->tariff_name!=$tarifItem->tariff_name)
+                                          <option>{{$tarifItem->tariff_name}} </option>  
+                                          @endif
+                                    @endisset
+                                         <option>{{$tarifItem->tariff_name}} </option> 
+                                     @endforeach  
+                                     @endif
+                                    </select>
+                                    
+                                </div>
+                                 <div class="col-md-12">
+                                    <select name="order_city" class="con-field" >
+                                     @if($cities)
+                                     @foreach ($cities as $city)
+
+                                     <option>{{$city}} </option>
+                                     @endforeach  
+                                     @endif
+                                    </select>
+                                    
+                                </div>
+                             <div class="col-md-12" style="text-align: center">
+                                    {{-- <textarea class="con-field" name="message" id="message" rows="6" placeholder="Your Message"></textarea> --}}
+                                    <div class="submit-area">
+                                        <input type="submit" id="submit-contact" class="btn-alt" value="Soummettre">
+                                        <div id="msg" class="message"></div>
+                                    </div>
+                                </div> 
                             </div>
                         </div>
 
                     </form>
                 </div>
-            </div>
-
+                <!-- End:Contact Form  -->
+            </div>  
         </div>
+        <!-- row /- -->
     </div>
     <!-- End: container-->
 </section>

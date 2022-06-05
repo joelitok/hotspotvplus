@@ -47,7 +47,7 @@
                                     <h2> Louer votre wifi </h2>
                                      <p> <i class="fa fa-hand-o-right" aria-hidden="true"></i> Tel : (+237) 6 55 83 88 84 </p>
                                     <div class="slider_btn">
-                                        <a href="#quote" class="more-link slider_btn_one">louer un wifi</a>
+                                        <a href="{{URL::to('/rent-a-wifi')}}" class="more-link slider_btn_one">louer un wifi</a>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                     <h2> Restez connecter partout au cameroun 24h/24 </h2>
                                     <p> <i class="fa fa-hand-o-right" aria-hidden="true"></i> Tel : (+237) 6 55 83 88 84 </p>
                                     <div class="slider_btn">
-                                        <a href="#quote" class="more-link slider_btn_one">louer un wifi</a>
+                                        <a href="{{URL::to('/rent-a-wifi')}}" class="more-link slider_btn_one">louer un wifi</a>
                                     </div>
                                 </div>
                             </div>
@@ -132,65 +132,37 @@
     <div class="container">
         <!-- Start: Heading -->
         <div class="base-header">
-            <h2>Our Special Plan</h2>
-            <p>Service features tended no do thoughts me on dissuade scarcely own are pretty spring suffer old denote his proposal speedily amr striking am now .</p>
+            <h2>Notre plan Spécial </h2>
+            <p>Internet est un outil de communication incontournable pour les entreprises aujourd’hui ! Ce pendant nos meilleurs offres sont les suivants :</p>
         </div>
         <!-- End:  heading -->
         <div class="row">
+
+            @forelse ($tariffs as $tariff)
             <div class="col-md-4 col-xs-12">
                 <!-- Start: pricing-box 1 -->
                 <div class="pricing-box">
                     <div class="pricing_heading">
-                        <h3>Basic plan</h3>
-                        <h2><span>$</span>40.00</h2>
+                        <h3>{{\Illuminate\Support\Str::ucfirst($tariff->tariff_name)}}</h3>
+                        <h2>{{$tariff->tariff_price}}<span>Fcfa</span></h2>
                     </div>
                     <ul>
-                        <li> <i class="icon_box-checked"></i>One-time Repair</li>
-                        <li><i class="icon_box-checked"></i> Regular Repair</li>
-                        <li> <i class="icon_box-checked"></i>Move-ins / Outs</li>
+                        <li> Data: &nbsp; {{$tariff->tariff_data}}</li>
+                        <li>Débit:&nbsp; {{$tariff->tariff_debit}}</li>
+                        <li> Valable:&nbsp; {{$tariff->tariff_periode}}</li>
                     </ul>
                     <div class="text-center">
-                        <a href="#" class="more-link">order now</a>
+                        <a href="{{ url('/rent-a-wifi/'.$tariff->id)}}" class="more-link">commandez</a>
                     </div>
                 </div>
                 <!-- End: pricing-box 1 -->
             </div>
-            <div class="col-md-4 col-xs-12">
-                <!-- Start: pricing-box 1 -->
-                <div class="pricing-box">
-                    <div class="pricing_heading">
-                        <h3>Repair plan</h3>
-                        <h2><span>$</span>70.00</h2>
-                    </div>
-                    <ul>
-                        <li> <i class="icon_box-checked"></i>One-time Repair</li>
-                        <li><i class="icon_box-checked"></i> Regular Repair</li>
-                        <li> <i class="icon_box-checked"></i>Move-ins / Outs</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="#" class="more-link">order now</a>
-                    </div>
-                </div>
-                <!-- End: pricing-box 1 -->
+            @empty
+            <div style="text-align: center">
+                <H1> Aucun tarrif disponible</H1>
             </div>
-            <div class="col-md-4 col-xs-12">
-                <!-- Start: pricing-box 1 -->
-                <div class="pricing-box">
-                    <div class="pricing_heading">
-                        <h3>Install plan</h3>
-                        <h2><span>$</span>90.00</h2>
-                    </div>
-                    <ul>
-                        <li> <i class="icon_box-checked"></i>One-time Repair</li>
-                        <li><i class="icon_box-checked"></i> Regular Repair</li>
-                        <li> <i class="icon_box-checked"></i>Move-ins / Outs</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="#" class="more-link">order now</a>
-                    </div>
-                </div>
-                <!-- End: pricing-box 1 -->
-            </div>
+            @endforelse
+           
         </div>
         <!--/ row -->
     </div>
