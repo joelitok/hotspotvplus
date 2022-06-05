@@ -15,11 +15,15 @@ class CreateMifisTable extends Migration
     {
         Schema::create('mifis', function (Blueprint $table) {
             $table->id();
-            $table->string('mifi_name');
-            $table->text('description');
-            $table->string('slider_image');
-            $table->string('caracteristique');
-            $table->string('status');
+            $table->string('mifi_name')->nullable();
+            $table->string('mifi_name_search')->nullable();
+            $table->string('mifi_serial_number')->nullable();
+            $table->string('mifi_marque')->nullable();
+            $table->string('mifi_password')->nullable();
+            $table->string('mifi_images')->nullable();
+            $table->integer('mifi_puce_number')->nullable();
+            $table->integer('mifi_status')->nullable();
+            $table->string('mifi_date_begin_use')->nullable();
             $table->timestamps();
         });
     }
