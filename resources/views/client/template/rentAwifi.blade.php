@@ -35,20 +35,20 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-md-4">
                                         <label style="font-size:14px">DATE DE DEBUT</label>  
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-8">
                                         <input class="con-field" name="dateStart"  type="date" placeholder="Date de début">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
                              <div class="row">
-                                 <div class="col ">
+                                 <div class="col-md-4">
                                     <label style="font-size:14px">DATE DE FIN</label> 
                                  </div>
-                                 <div class="col">
+                                 <div class="col-md-8">
                                     <input class="con-field" name="dateEnd"  type="date" placeholder="Date de fin">
                              
                                  </div>
@@ -63,28 +63,38 @@
                                     <input class="con-field" name="order_name" id="name" type="text" placeholder="Nom">
                                 </div>
                                 <div class="col-md-12">
-                                    <input class="con-field" name="order_email" id="email" type="text" placeholder="Email">
+                                    <input class="con-field" name="order_email" id="email"-md-4 type="text" placeholder="Email">
                                 </div>
                                 <div class="col-md-12">
                                     <input class="con-field" name="order_phone" id="phone" type="text" placeholder="Numéro de télephone">
                                 </div>
                                 <div class="col-md-12">
                                     <select name="order_forfait_name" class="con-field">
-                                      @isset($tariff)
+                                      {{-- @isset($tariff)
                                       <option>{{$tariff->tariff_name}}</option>   
-                                      @endisset
-                                        
+                                      @endisset --}}
                                       
-                                     @if($tariffs)
+                                      @if($exist==true)
+                                      @if($tariffs)
+                                      @foreach ($tariffs as $tarifItem)
+                                         @isset($tariff)
+                                         <option>{{$tariff->tariff_name}} </option>
+                                           @if($tariff->id!=$tarifItem->id)
+                                           <option>{{$tarifItem->tariff_name}} </option>
+                                           @endif
+                                          @endisset
+                                      @endforeach 
+                                      @endif
+                                      @else
+                                      @if($tariffs)
                                      @foreach ($tariffs as $tarifItem)
-                                     @isset($tariff)
-                                          @if($tariff->tariff_name!=$tarifItem->tariff_name)
-                                          <option>{{$tarifItem->tariff_name}} </option>  
-                                          @endif
-                                    @endisset
-                                         <option>{{$tarifItem->tariff_name}} </option> 
-                                     @endforeach  
+                                          <option>{{$tarifItem->tariff_name}} </option>
+                                     @endforeach 
                                      @endif
+                                          
+                                      @endif
+                                      
+                                     
                                     </select>
                                     
                                 </div>

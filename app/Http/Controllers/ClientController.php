@@ -12,7 +12,9 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ClientController extends Controller
 {
-    
+// check if number is find
+public $exist=false;
+
     
 public function home() {
 
@@ -21,21 +23,22 @@ $sliders=Slider::where('slider_status',1)->orderBy('id', 'DESC')->get();
 $tariffs=Tariff::where('tariff_status',1)->orderBy('id', 'DESC')->get(); 
 return view('client.template.home')->with('sliders',$sliders)->with('tariffs', $tariffs);
                            }                           
-public function rentAwifi($id=0){
+public function rentAwifi($id=null){
 
 //listes des villes
 $cities = array("DOUALA","ADAMAOUA","BAFFOUSSAM","BAMENDA","BERTOUA","BUEA","EBOLOWA","GAROUA","MAROUA","YAOUNDE");
 
 $tariffs=Tariff::where('tariff_status',1)->orderBy('id', 'DESC')->get(); 
-if($id!=null){
-    $tariff=Tariff::find($id);
+$tariff=Tariff::find($id);
+if($tariff){
+$this->exist=true;
+$tariffs=Tariff::where('tariff_status',1)->where('tariff_name','<>',$tariff->tariff_name)->orderBy('id', 'DESC')->get(); 
 return view('client.template.rentAwifi')
-->with('cities', $cities)->with('tariffs',$tariffs)->with('tariff',$tariff);
-}else{
-    return view('client.template.rentAwifi')
-    ->with('cities', $cities)->with('tariffs',$tariffs);
-    
+->with('cities', $cities)->with('tariffs',$tariffs)
+->with('tariff',$tariff)->with('exist', $this->exist);
 }
+return view('client.template.rentAwifi')
+    ->with('cities', $cities)->with('tariffs',$tariffs)->with('exist',$this->exist);
 
 }
 
