@@ -336,8 +336,7 @@
    <span class="preheader">E-mail</span>
 
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
-     <div style="text-align:center">  <img src="{{asset('frontend/images/logo.jpg')}}" alt="logo" height="75px" width="75px"></div>
- 
+   
       <tr>
         <td>&nbsp;</td>
         <td class="container">
@@ -345,20 +344,21 @@
 
             <!-- START CENTERED WHITE CONTAINER -->
             <table role="presentation" class="main">
-                 
+              <div style="text-align:center">  <img src="{{asset('frontend/images/logo.jpg')}}" alt="logo"></div>
+        
                <tr>
                 <td class="wrapper">
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                       <tr> <td style="text-align: center;font-weight: bolder;"> M/Mme :  {{ $order_name }} </td> </tr>
                       <!-- START MAIN CONTENT AREA -->
-                       <tr>  <td style="text-align: center;font-weight: bolder;">  Téléphone : {{ $order_phone }}   </td> </tr>
-                       <tr>  <td style="text-align: center;font-weight: bolder;"> Email : {{ $order_email }}  </td> </tr>
-                       <tr>  <td style="text-align: center;font-weight: bolder;">  Ville: {{ $order_city }}   </td> </tr>
-                       <tr>  <td style="text-align: center;font-weight: bolder;">  pour le : {{ $dateStart }}  au {{ $dateEnd }}  </td> </tr>
+                       <tr>  <td>  Téléphone : {{ $order_phone }}   </td> </tr>
+                       <tr>  <td> Email : {{ $order_email }}  </td> </tr>
+                       <tr>  <td>  Ville: {{ $order_city }}   </td> </tr>
+                       <tr>  <td>  pour le : {{ $dateStart }}  au {{ $dateEnd }}  </td> </tr>
 
                     <tr><td> 
                         <br> 
-                <p style="text-align: justify;font-weight: bolder; font-family: cursive;">commande: {{ ucfirst($order_forfait_name) }} </p> </td></tr>
+                <p>commande: {{ ucfirst($order_forfait_name) }} </p> </td></tr>
                     
                     <tr>
                       <td>
@@ -377,37 +377,14 @@
                             </tr>
                           </tbody>
                         </table>
-                        {{-- <p>Message : {{ $message }}</p> --}}
-                        <p style="text-align: justify;font-weight: bolder; font-family: cursive;">Merci. </p>
+                        
+                        <p style="text-align: justify;font-weight: bolder; font-family: cursive;">Tous droit reservé </p>
                       </td>
                     </tr>
                   </table>
                 </td>
               </tr> 
-
-
-            <!-- END MAIN CONTENT AREA -->
             </table>
-            <!-- END CENTERED WHITE CONTAINER -->
-
-            <!-- START FOOTER -->
-         {{-- <div class="footer">
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="content-block">
-                    <span class="apple-link">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
-                    <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif">Unsubscribe</a>.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content-block powered-by">
-                    Powered by <a href="http://htmlemail.io">HTMLemail</a>.
-                  </td>
-                </tr>
-              </table>
-            </div> --}}
-            <!-- END FOOTER -->
-
           </div>
         </td>
         <td>&nbsp;</td>

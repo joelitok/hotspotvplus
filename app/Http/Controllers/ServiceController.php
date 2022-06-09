@@ -51,6 +51,8 @@ class ServiceController extends Controller
         $service = new Service();
         $service->service_title = $request->input('service_title');
         $service->service_description = $request->input('service_description');
+        $service->service_description2 = $request->input('service_description2');
+        $service->service_description3 = $request->input('service_description3');
         $service->service_image = $fileNameToStore;
         $service->service_status = 1;
         $service->save();
@@ -107,7 +109,8 @@ class ServiceController extends Controller
         $service = Service::find($request->input('id'));
         $service->service_title = $request->input('service_title');
         $service->service_description = $request->input('service_description');
-
+        $service->service_description2 = $request->input('service_description2');
+        $service->service_description3 = $request->input('service_description3');
         $this->validate(
             $request,
             [

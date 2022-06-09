@@ -83,6 +83,24 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
+                                                        <label class="col-form-label">Descr... 2:</label>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input class="form-control" type="text" name="service_description2"
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3">
+                                                        <label class="col-form-label">Descr... 3:</label>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input class="form-control" type="text" name="service_description3"
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3">
                                                         <label class="col-form-label">Image</label>
                                                     </div>
                                                     <div class="col-lg-8">

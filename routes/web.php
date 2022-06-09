@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TariffController;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +29,14 @@ Route::get('/',[ClientController::class,'home']);
 Route::get('/rent-a-wifi/{id?}',[ClientController::class,'rentAwifi']);
 Route::get('/solutions',[ClientController::class,'solutions']);
 Route::get('/services',[ClientController::class,'services']);
-Route::get('/service-detail',[ClientController::class,'service_detail']);
+Route::get('/service-detail/{id}',[ClientController::class,'service_detail']);
 Route::get('/contactez',[ClientController::class,'contactez']);
 Route::post('/order_add_save',[ClientController::class,'order_add_save']);
+
+
+//mail send to Admin
+Route::post('/contactez',[MailController::class,'send_mail']);
+
 
 //service manager image
 Route::prefix('admin')->group(function(){
@@ -60,8 +67,9 @@ Route::get('/enable_tariff/{id}', [TariffController::class, 'enable_tariff']);
 Route::get('/disable_tariff/{id}', [TariffController::class, 'disable_tariff']);
 
 
-
-
+//manager order by admin
+Route::get('/orders', [OrderController::class, 'orders']);
+Route::get('/delete_order/{id}', [OrderController::class, 'delete_order']);
 
 });
 

@@ -27,7 +27,7 @@ serveurs de messageries et les sites web.</p>
                             <h3>{{$service->service_title}}</h3>
                         </a>
                         <p>{{\Illuminate\Support\Str::limit($service->service_description, 100, $end='...')}}</p>
-                        <a class="serv_read" href="{{URL::to('/service-detail')}}">voir plus</a>
+                        <a class="serv_read" href="{{URL::to('/service-detail/'.$service->id)}}">voir plus</a>
                     </div>
                 </div>
              @empty
@@ -52,12 +52,12 @@ serveurs de messageries et les sites web.</p>
         <div class="row">
             <div class="col-md-12 callto-pull-left">
                 <div class="callto-text">
-                    <h2>We're here to help your computer repair service</h2>
-                    <p>We're here to help you manage your problem regular emails that will arm </p>
+                    <h2>Vecteur+ technologies</h2>
+                    <p>Vecteur+ technologies est une entreprise de services informatiques et télécoms.</p>
                 </div>
                 <div class="callto-link">
-                    <span> +47 377 488 289</span>
-                    <a href="" class="more-link">Send Request </a>
+                    <span> Tél: +237 6 75 75 94 82</span>
+                    <a href="{{URL::to('/contactez')}}" class="more-link">Nous contactez </a>
                 </div>
             </div>
         </div>

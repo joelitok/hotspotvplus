@@ -2,28 +2,80 @@
 @section('content')
     <!-- Start: About Section 
 ==================================================-->
+<!-- Start: Service Section 
+==================================================-->
+<section class="service_sec_two">
+    <div class="container">
+        <div class="base-header">
+            <h2>Processus de Location</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service_box_tw">
+                    
+                   <img src="{{asset('frontend/images/im1.png')}}" height="75px" width="75px" alt="">                     
+                    <div class="service_cnt">
+                        <a href="#">
+                            <h3> Étape 1 : RÉSERVEZ EN LIGNE</h3>
+                        </a>
+                        <p>
+                            Choisissez la durée de votre séjour, la ville de résidence et un forfait internet mensuel pour rester connecter 24h/24 et partout où vous allez !!!   </p>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Service item -->
+            <div class="col-md-6">
+                <div class="service_box_tw">
+                    <img src="{{asset('frontend/images/im2.png')}}" height="70px" width="70px" alt="">                     
+                    <div class="service_cnt">
+                        <a href="#">
+                            <h3> Étape 2 : RECEVEZ VOTRE MODEM</h3>
+                        </a>
+                        <p>
+                            Une fois la réservation effectuée, nous contactons soit par e-mail soit par WhatsApp, afin de prendre un rendez-vous pour vous remettre votre modem Wi-Fi portable. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Service item -->
+            <div class="col-md-6">
+                <div class="service_box_tw">
+                    <img src="{{asset('frontend/images/im3.png')}}" height="75px" width="75px" alt="">                     
+                    <div class="service_cnt">
+                        <a href="#">
+                            <h3> Étape 3 : PROFITEZ D’INTERNET</h3>
+                        </a>
+                        <p>
+                            Il suffit de mettre le modem en marche et vous disposez d’un réseau Wi-Fi personnalisé où vous pouvez jusqu’à 8 appareils. Simple rapide et efficace ! </p>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Service item -->
+            <div class="col-md-6">
+                <div class="service_box_tw">
+                    <img src="{{asset('frontend/images/im4.png')}}" height="75px" width="75px" alt="">                     
+                    <div class="service_cnt">
+                        <a href="#">
+                            <h3> Étape 4 : RETOURNEZ DE MODEM</h3>
+                        </a>
+                        <p>
+                            Deux jours avant la fin de la durée de votre séjour nous reprenons un rendez-vous afin de récupérer l’appareil !  </p>
+                    </div>
+                </div>
+            </div>
+          
+           
+        </div>
+        <!--/.row -->
+    </div>
+    <!--/.container -->
+</section>
+
 <section class="about_sec_2">
-    
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="abut_title">
-                    <h2>We're here to help you mobile repair service</h2>
-                    <p>Attended no do thoughts me on dissuade scarcely own are prettyot spring suffer old denote his budy proposal speedily mr striking amto nut attention   tended no do after thoughts me on dissuade scarcely own are prettyot spring suffer old denote his budy proposal speedily mr striking amto nut attention ctttended no do thoughts me on  </p>
-                    <div class="about_list_itm">
-                        <ul>
-                            <li>Unlimited over the phone assistance</li>
-                            <li>Hard drive defragmentation</li>
-                            <li>Refurbished Technology Sales</li>
-                            <li>Computer Technology Sales</li> 
-                        </ul>
-                        <ul>
-                            <li>Full year antivirus program ezyrepair</li>
-                            <li>Unlimited over the phone assistance</li>
-                            <li>Parts available depending on the</li>
-                            <li>Laptop depending on the</li> 
-                        </ul>
-                    </div>
+                  <img src="{{asset('frontend/images/modem.gif')}}" alt="" srcset="">
                 </div>
             </div> 
             <div class="col-md-6">
@@ -70,10 +122,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <select name="order_forfait_name" class="con-field">
-                                      {{-- @isset($tariff)
-                                      <option>{{$tariff->tariff_name}}</option>   
-                                      @endisset --}}
-                                      
+                                    
                                       @if($exist==true)
                                       @if($tariffs)
                                       @foreach ($tariffs as $tarifItem)

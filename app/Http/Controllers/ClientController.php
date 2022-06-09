@@ -55,8 +55,12 @@ $services=Service::where('service_status', 1)->orderBy('id','DESC')->get();
 return view('client.template.services')->with('services', $services);  
 }
 
-public function service_detail(){
-return view('client.template.servicedetail');
+public function service_detail($id){
+$service=Service::find($id);   
+
+//to show resent service
+$services=Service::where('service_status', 1)->orderBy('id','DESC')->limit(3)->get();
+return view('client.template.servicedetail')->with('services', $services)->with('service',$service);
 }
 
 
@@ -76,7 +80,7 @@ return view('client.template.servicedetail');
 
         //send mail
         Mail::send(
-        'mailForm',
+        'mailOrder',
         array(
                 'order_name' => $request->input('order_name'),
                 'order_email' => $request->input('order_email'),
@@ -100,7 +104,7 @@ return view('client.template.servicedetail');
      $order->order_phone = $request->input('order_phone');
      $order->order_forfait_name = $request->input('order_forfait_name');
      $order->order_city = $request->input('order_city');
-     $order->order_periode = $request->input('dateStart').'//'.$request->input('dateEnd');
+     $order->order_periode = $request->input('dateStart').'__au__'.$request->input('dateEnd');
      $order->order_status = 1;
      $order->save();
      Alert::success('Thanks', 'Votre commande à été bien prise en compte');

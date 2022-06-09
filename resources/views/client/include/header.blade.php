@@ -70,9 +70,9 @@
                         </li>
                         <li class="has-sub"><a href="{{URL::to('/solutions')}}" title="page">Solutions Pro</a>
                             <ul>
-                                <li><a href="gallery.html" title="Gallery">Wifi pour conference</a>
+                                <li><a href="#" title="Gallery">Wifi pour conference</a>
                                 </li>
-                                <li><a href="single-gallery.html" title="Gallery">Wifi pour entreprise</a>
+                                <li><a href="#" title="Gallery">Wifi pour entreprise</a>
                                 </li>
                                 <li><a href="{{URL::to('/services')}}" title="Services">Services</a></li>
                                 
