@@ -4,37 +4,6 @@
     <div class="slides__preload_wrapper">
         <div class="spinner"></div>
     </div>
-     {{-- <div class="slider_home">
-     @if($sliders)
-     @forelse ($sliders as $slider)
-        <div class="single_slider" slide_bg_2>
-            <div class="slider_item_tb" style="background:url('/slider_images/{{$slider->slider_image}}')">
-                <div class="slider_item_tbcell">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-xs-12">
-                                <h2>{{$slider->slider_title}}</h2>
-                                <div class="slider_btn">
-                                    <a href="#quote" class="more-link slider_btn_one">Louer un wifi</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-         
-     @empty
-         <h2>vide vide vide</h2>
-     @endforelse
-         
-     @endif
-       
-    </div>
-</div>
-<!-- End:  Slider
-==================================================-->  --}}
  <div class="slider_home">
         <!-- Start: Slider 1  -->
             <div class="single_slider slide_bg_1">
@@ -183,7 +152,7 @@
                 <!-- client 1 -->
                 <div class="item row">
                     <div class="col-md-12">
-                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-1.png')}}">
+                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-1.jpg')}}">
                         </div>
                     </div>
                 </div>
@@ -197,21 +166,21 @@
                 <!-- client 3 -->
                 <div class="item row">
                     <div class="col-md-12">
-                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-3.png')}}">
+                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-3.jpg')}}">
                         </div>
                     </div>
                 </div>
                 <!-- client 4 -->
                 <div class="item row">
                     <div class="col-md-12">
-                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-4.png')}}">
+                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-4.jpg')}}">
                         </div>
                     </div>
                 </div>
                 <!-- client 5 -->
                 <div class="item row">
                     <div class="col-md-12">
-                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-5.png')}}">
+                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-5.jpg')}}">
                         </div>
                     </div>
                 </div>
@@ -225,7 +194,7 @@
                 <!-- client 7 -->
                 <div class="item row">
                     <div class="col-md-12">
-                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-4.png')}}">
+                        <div class="client-box"><img alt="client" src="{{asset('frontend/images/client-4.jpg')}}">
                         </div>
                     </div>
                 </div>
@@ -238,4 +207,6 @@
 </div>
 <!--   End:Client Section
 ==================================================-->
+
+
 @endsection

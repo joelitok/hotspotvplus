@@ -45,16 +45,107 @@
                             <h6><a href="{{URL::to('/solutions')}}">Solutions Pro</a></h6>
                         </li>
                         <li>
-                            <h6><a href="{{URL::to('/contactez')}}">Contact</a></h6>
+                            <h6><a href="{{URL::to('/contactez')}}">Contact</a> </h6>
                         </li>
                         <li>
-                            <h6><a href="{{URL::to('/login')}}">Logo</a></h6>
+                            <h6>  <button class="btn btn-outline-primary mb-4" data-toggle="modal" data-target="#exampleModal">
+                                Log in
+                            </button></h6>
                         </li>
                         
                     </ul>
                 </div>
             </div>
             <!-- End: Latest post -->
+
+
+
+
+
+
+
+
+
+
+{{-- start modal --}}
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+           
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div style="text-align: center">
+                <img src="{{asset('backend/images/logo1.jpg')}}" height="100px" width="100px">
+            </div>
+            <form action="{{url('/admin/signin_account')}}" method="post"
+                enctype="multipart/form-data">
+                @csrf
+                <div class="card">
+                  
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-lg-12">
+                                <input class="form-control" maxlength="25" type="text"
+                                    name="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-11">
+                                <input type="password" 
+                                    name="password" id="password" class="form-control"/>  
+                            </div>
+                            <div class="col-lg-1">
+                                <span style="color: black" class="fa fa-eye-slash" 
+                                    id="togglePassword"></span>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row" style="text-align: center">
+                        
+                        <div class="col-lg-12">
+                            <input type="submit" value="Envoyer" class="btn btn-success">
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', () => {
+
+        // Toggle the type attribute using
+        // getAttribure() method
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+              password.setAttribute('type', type);
+
+        // Toggle the eye and bi-eye icon
+        this.classList.toggle('fa-eye');
+    });
+</script>
+
+
+
+
+  <!-- Button to Open the Modal -->
+
+  
+
+
             <!-- Start: CONTACT INFO -->
             <div class="col-md-3 col-xs-12">
                 <div class="widget">
