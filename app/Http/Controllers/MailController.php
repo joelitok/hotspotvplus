@@ -31,8 +31,9 @@ $this->validate(
        ),
 
        function ($msg) use ($request) {
-           $msg->from('joelnkouatchet@gmail.com');
-           $msg->to('joelnkouatchet1995@gmail.com', 'User')->subject($request->input('name'));
+           $msg->from('commandes@237services.com');
+           $msg->to($request->input('email'), 'User')->subject($request->input('name'));
+           $msg->to('commandes@237services.com', 'Admin')->subject($request->input('name'));
        }
                );
 

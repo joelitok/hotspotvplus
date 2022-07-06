@@ -16,7 +16,8 @@ class AuthController extends Controller
     //get home passe with list admin page
     public function home(){
            $admins = Admin::orderBy('id', 'DESC')->paginate(5);
-           return view('admin.template.index')->with('admins',$admins);
+
+         return view('admin.template.index')->with('admins',$admins);
     }
 
     //add new user account
@@ -37,6 +38,7 @@ class AuthController extends Controller
         $admin->gender = $request->input('gender');
         $admin->city = $request->input('city');
         $admin->password = bcrypt($request->input('password'));
+        $admin->type ='admin';
         $admin->status = 1;
         $admin->save();
 
@@ -102,5 +104,31 @@ class AuthController extends Controller
  }
 
 
+ public function update_admin(Request $request){
 
+    $admin = Admin::find($request->input('id'));
+    $admin->name = $request->input('name');
+    $admin->email = $request->input('email');
+    $admin->city = $request->input('city');
+    $admin->phone = $request->input('phone');
+    $admin->gender = $request->input('gender');
+    $admin->password = bcrypt($request->input('password'));
+    $admin->type ='admin';
+    $this->validate(
+        $request,
+        [
+            'name' => 'required',
+            'email' => 'required',
+            'city' => 'required',
+            'phone' => 'required',
+            'gender' => 'required',
+            'password' => 'required'
+        ]
+    );
+
+    $admin->update();
+    Toastr::success("un utilisateur a été modifier avec succès :)", 'Success');
+    return redirect('/admin');   
+ }
+   
 }

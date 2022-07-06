@@ -20,10 +20,13 @@ class CreateMifisTable extends Migration
             $table->string('mifi_serial_number')->nullable();
             $table->string('mifi_marque')->nullable();
             $table->string('mifi_password')->nullable();
-            $table->string('mifi_images')->nullable();
-            $table->integer('mifi_puce_number')->nullable();
-            $table->integer('mifi_status')->nullable();
+            $table->string('mifi_image')->nullable();
+            $table->string('mifi_puce_number')->nullable();
+            $table->string('mifi_status')->nullable();
             $table->string('mifi_date_begin_use')->nullable();
+            
+            //attributed
+            $table->string('id_user_attributed_mifi')->default(0)->nullable();
             $table->timestamps();
         });
     }

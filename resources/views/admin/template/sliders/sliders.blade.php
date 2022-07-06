@@ -132,8 +132,7 @@
 
                                                 <tr>
                                                     <td>{{ $inc }}</td>
-                                                    <td><img
-                                                            src="/slider_images/{{$slider->slider_image}}">
+                                                    <td><img src="{{asset('slider_images/'.$slider->slider_image)}}">
                                                     </td>
                                                     <td>{{ $slider->slider_title }}</td>
                                                     <td>{{ $slider->created_at->format('d/m/Y   H:i:s') }}</td>

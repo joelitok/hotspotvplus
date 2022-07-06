@@ -27,8 +27,8 @@
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="#"><img src="http://www.urbanui.com/justdo/template/images/logo-white.svg" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="#"><img src="http://www.urbanui.com/justdo/template/images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-5" href="#">{{Session::get('email')}}</a>
+        <a class="navbar-brand brand-logo-mini" href="#">{{Session::get('email')}}</a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -239,19 +239,7 @@
    </div>
    <!-- page-body-wrapper ends -->
  </div>
- <script>
-  $(document).on("click", "#delete", function (e) {
-      e.preventDefault();
-      var link = $(this).attr("href");
-      bootbox.confirm("Voulez-vous vraiment supprimer cet element ?", function (confirmed) {
-          if (confirmed) {
-              window.location.href = link;
 
-          }
-          ;
-      });
-  });
-</script>
  <!-- container-scroller -->
  <!-- plugins:js -->
  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
@@ -268,10 +256,48 @@
  <script src="{{asset('backend/js/template.js')}}"></script>
  <script src="{{asset('backend/js/settings.js')}}"></script>
  <script src="{{asset('backend/js/todolist.js')}}"></script>
+ 
+ <script src="{{asset('backend/js/bootbox.min.js')}}"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="{{asset('backend/js/dashboard.js')}}"></script>
+<!-- End custom js for this page-->
  <!-- endinject -->
  <!-- Custom js for this page-->
  <script src="{{asset('backend/js/data-table.js')}}"></script>
  <!-- End custom js for this page-->
+
+
+ <script>
+  $(document).on("click", "#delete", function (e) {
+      e.preventDefault();
+      var link = $(this).attr("href");
+      bootbox.confirm("Voulez-vous vraiment supprimer cet element ?", function (confirmed) {
+          if (confirmed) {
+              window.location.href = link;
+
+          }
+          ;
+      });
+  });
+</script>
+
+<script>
+  $(document).on("click", "#unlocatemifi", function (e) {
+      e.preventDefault();
+      var link = $(this).attr("href");
+      bootbox.confirm("souhaitez vous  desattribuer ce mifi ?", function (confirmed) {
+          if (confirmed) {
+              window.location.href = link;
+
+          }
+          ;
+      });
+  });
+
+</script>
+
+
 
 </body>
 

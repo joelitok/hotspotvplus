@@ -22,6 +22,8 @@ class CreateOrdersTable extends Migration
             $table->string('order_periode')->nullable();
             $table->string('order_city')->nullable();
             $table->string('order_status');
+            //id mifi
+            $table->string('id_mifi_attributed')->default(0)->nullable();
             $table->timestamps();
         });
     }

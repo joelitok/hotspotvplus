@@ -26,7 +26,7 @@ return view('client.template.home')->with('sliders',$sliders)->with('tariffs', $
 public function rentAwifi($id=null){
 
 //listes des villes
-$cities = array("DOUALA","ADAMAOUA","BAFFOUSSAM","BAMENDA","BERTOUA","BUEA","EBOLOWA","GAROUA","MAROUA","YAOUNDE");
+$cities = array("DOUALA","YAOUNDE");
 
 $tariffs=Tariff::where('tariff_status',1)->orderBy('id', 'DESC')->get(); 
 $tariff=Tariff::find($id);
@@ -67,50 +67,19 @@ return view('client.template.servicedetail')->with('services', $services)->with(
 //validation order
  public function order_add_save(Request $request)
  {
- $this->validate(
-         $request,
-         [
-             'order_name' => 'required',
-             'order_phone' => 'required',
-             'order_email'=>'required',
-             'order_city' => 'required'
-         ]
-     );
+ $this->validate($request,['order_name' => 'required','order_phone' => 'required','order_email'=>'required','order_city' => 'required']);
 
+ //send mail
+Mail::send('mailOrder', array( 'order_name' => $request->input('order_name'), 'order_email' => $request->input('order_email'), 'order_phone' => $request->input('order_phone'), 'order_forfait_name' => $request->input('order_forfait_name'),'order_city' => $request->input('order_city'), 'period' => $request->input('period'),),
+    function ($message) use ($request){
 
-    //  function is_connected()
-    //  {
-    //      $connected = @fsockopen("www.google.com", 80); 
-    //                                          //website, port  (try 80 or 443)
-    //      if ($connected){
-    //          $is_conn = true; //action when connected
-    //          fclose($connected);
-    //      }else{
-    //          $is_conn = false; //action in connection failure
-    //      }
-    //      return $is_conn;
-     
-    //  }
+            $message->from('commandes@237services.com');
 
+            $message->to($request->input('order_email'), 'User')->subject($request->input('order_forfait_name'));
 
-
-        //send mail
-        Mail::send(
-        'mailOrder',
-        array(
-                'order_name' => $request->input('order_name'),
-                'order_email' => $request->input('order_email'),
-                'order_phone' => $request->input('order_phone'),
-                'order_forfait_name' => $request->input('order_forfait_name'),
-                'order_city' => $request->input('order_city'),
-                'dateStart' => $request->input('dateStart'),
-                'dateEnd' => $request->input('dateEnd'),
-        ),
-        function ($message) use ($request) {
-            $message->from('joelnkouatchet@gmail.com');
-            $message->to('joelnkouatchet1995@gmail.com', 'User')->subject($request->input('order_forfait_name'));
-        }
-                );
+            $message->to('commandes@237services.com', 'Admin')->subject($request->input('order_forfait_name'));
+ 
+    });
 
 
      //save order
@@ -120,15 +89,38 @@ return view('client.template.servicedetail')->with('services', $services)->with(
      $order->order_phone = $request->input('order_phone');
      $order->order_forfait_name = $request->input('order_forfait_name');
      $order->order_city = $request->input('order_city');
-     $order->order_periode = $request->input('dateStart').'__au__'.$request->input('dateEnd');
+     $order->order_periode = $request->input('period');
      $order->order_status = 1;
      $order->save();
      Alert::success('Thanks', 'Votre commande à été bien prise en compte');
      return redirect('/rent-a-wifi');
  }
 
+ public function search_service(Request $request){
+
+    $search = $request->get('search');
+
+    $services = Service::where('service_title', 'like', '%' . $search . '%')->orWhere('service_description', 'like', '%' . $search . '%')->orWhere('service_description2', 'like', '%' . $search . '%')->orWhere('service_description3', 'like', '%' . $search . '%')->orderBy('id', 'DESC')->paginate(8);
+    return  view('client.template.search')->with('services', $services);
+}
 
 
+public function mifi_conference(){
+ return view('client.template.mificonference');
+}
+
+
+public function internet_entreprise(){
+return view('client.template.internetEntreprise');
+}
+
+public function internet_domicile(){
+    return view('client.template.internetDomicile');
+}
+
+public function solution_pro(){
+    return view('client.template.solutionspro');
+}
 
 
 

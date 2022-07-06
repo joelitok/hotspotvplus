@@ -20,7 +20,6 @@
             <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/sliders')}}">Slides</a></li>
             <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin/tariffs')}}">Tariffs</a></li>
             <li class="nav-item"><a class="nav-link" href="{{URL::to('/admin')}}">Utilisateurs</a></li>
-
           </ul>
         </div>
       </li>
@@ -33,7 +32,7 @@
         </a>
         <div class="collapse" id="tables">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{URL::to('/admin/mifi')}}">Mifi</a></li>               
+            <li class="nav-item"> <a class="nav-link" href="{{URL::to('/admin/mifis')}}">Mifi</a></li>               
           </ul>
         </div>
       </li>

@@ -168,7 +168,7 @@ section {
     content: "";
     position: absolute;
     width: 55px;
-    background: #B89841;
+    background: #33ACFF;
     margin-left: 0px;
     height: 2px;
     right: 50%;
@@ -184,7 +184,7 @@ section {
 .testimonials-section .base-header h3::after, .why_chs .base-header h3::after, .about_bottom_warp .base-header h3::after {
   position: absolute;
   content: "";
-  background: #B89841;
+  background: #33ACFF;
   width: 100px;
   height: 2px;
   left: 50%;
@@ -255,10 +255,10 @@ section {
   letter-spacing: 0px;
   border-radius: 50px;
   color: #fff;
-  /*! border: 1px solid #B89841; */
+  /*! border: 1px solid #33ACFF; */
   text-transform: uppercase;
   font-size: 15px;
-  background: #B89841;
+  background: #33ACFF;
   line-height: 14px;
 }
 
@@ -284,14 +284,14 @@ section {
 }
 
 .owl-nav div:hover {
-  color: #B89841;
+  color: #33ACFF;
 }
 /*---------------------------------------------------- 
    2. Header Section 
 ------------------------------------------------------*/
 /* Start: hEADER TO Location*/
 .header {
-    background-color: #B89841;
+    background-color: #33ACFF;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -472,7 +472,7 @@ section {
 }
 
 #navigation > ul > li:hover > a {
-  color: #B89841;
+  color: #33ACFF;
 }
 
 #navigation ul ul {
@@ -534,7 +534,7 @@ section {
 
 #navigation ul ul li:hover > a, #navigation ul ul li a:hover {
   color: #fff;
-  background: #B89841;
+  background: #33ACFF;
 }
 
 #navigation.small-screen {
@@ -581,7 +581,7 @@ section {
 }
 
 #navigation.small-screen ul ul li:hover > a, #navigation.small-screen ul ul li.active > a {
-  color: #B89841;
+  color: #33ACFF;
 }
 
 #navigation.small-screen ul ul, #navigation.small-screen ul ul ul, #navigation.small-screen.align-right ul ul {
@@ -795,6 +795,16 @@ section {
   background: #f0f0f0 url("../images/slider2.jpg") no-repeat;
 }
 
+.slide_bg_3 {
+  background: #f0f0f0 url("../images/slider3.png") no-repeat;
+}
+
+.slide_bg_4{
+  background: #f0f0f0 url("../images/slider4.png") no-repeat;
+}
+
+
+
 .single_slider {
   background-color: #dddd;
   background-position: 50% 0px;
@@ -805,6 +815,12 @@ section {
 }
 
 .slide_bg_2 {
+  text-align: center;
+}
+.slide_bg_3 {
+  text-align: center;
+}
+.slide_bg_4 {
   text-align: center;
 }
 
@@ -912,7 +928,7 @@ section {
 }
 
 .slider_home .owl-nav div:hover i::before {
-  background: #B89841;
+  background: #33ACFF;
   color: #fff;
 }
 
@@ -946,7 +962,7 @@ section {
     top: 0px;
     margin-left: -30px;
     font-size: 18px;
-    color: #B89841;
+    color: #33ACFF;
     font-style: normal;
     font-family: "eleganticons";
 }
@@ -966,7 +982,7 @@ section {
     position: absolute;
     left: 0;
     top: 5px;
-    color: #B89841;
+    color: #33ACFF;
     font-size: 55px;
 
 }
@@ -1022,7 +1038,7 @@ letter-spacing: 3px;
   content: "";
   width: 90px;
   height: 1px;
-  background: #B89841;
+  background: #33ACFF;
   bottom: -4px;
   left: 0;
   -webkit-transition: all 0.2s ease 0s;
@@ -1055,7 +1071,7 @@ letter-spacing: 3px;
 }
 
 .owl-dot.active {
-  background: #B89841;
+  background: #33ACFF;
   width: 25px;
   border-radius: 25px;
   height: 8px;
@@ -1294,7 +1310,7 @@ margin: 0px 5px;
       bottom: -2px;
       height: 3px;
       width: 0px;
-      background-color: #B89841;
+      background-color: #33ACFF;
       transition: all 500ms ease;
       -moz-transition: all 500ms ease;
       -webkit-transition: all 500ms ease;
@@ -1308,7 +1324,7 @@ margin: 0px 5px;
       bottom: -2px;
       height: 3px;
       width: 0px;
-      background-color: #B89841;
+      background-color: #33ACFF;
       transition: all 500ms ease;
       -moz-transition: all 500ms ease;
       -webkit-transition: all 500ms ease;
@@ -1410,7 +1426,7 @@ margin-right: 15px;
 .work-section .more-link {
   margin-top: 50px;
   background: #fff;
-  color: #B89841;
+  color: #33ACFF;
   margin-bottom: 50px;
   padding: 18px 30px;
 }
@@ -1422,7 +1438,7 @@ margin-right: 15px;
 
 .work-section .text-center {
   width: 100%;
-  background: #B89841;
+  background: #33ACFF;
   padding: 30px 0px;
 }
 /* Work items ------------------*/
@@ -1499,7 +1515,7 @@ margin-right: 15px;
 .projects-titles li::after {
   width: 100%;
   height: 2px;
-  background: #B89841;
+  background: #33ACFF;
   content: "";
   bottom: -15px;
   position: absolute;
@@ -1519,7 +1535,7 @@ margin-right: 15px;
 }
 
 .projects-titles li.active {
-  color: #B89841;
+  color: #33ACFF;
 }
 
 .project-hover h6 {
@@ -1566,7 +1582,7 @@ margin-right: 15px;
 }
 
 .project-hover::before {
-  background: #B89841;
+  background: #33ACFF;
   content: "";
   height: 100%;
   left: 0;
@@ -1728,7 +1744,7 @@ margin-right: 15px;
   position: absolute;
   top: 50%;
   right: 50%;
-  background: #B89841;
+  background: #33ACFF;
   text-align: center;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -1853,7 +1869,7 @@ margin-right: 15px;
 
 .pricing-box a {
   color: #fff;
-  background: #B89841;
+  background: #33ACFF;
   /*! border-radius: 50px; */
   border: 1px solid transparent;
   /*! padding: 10px 30px; */
@@ -2036,7 +2052,7 @@ margin-right: 15px;
   border: 0 solid transparent;
   border-width: 12px 29px;
   border-right-width: 0px;
-  border-bottom-color: ;
+
 }
 
 .testimonial_content img {
@@ -2057,7 +2073,7 @@ margin-right: 15px;
 }
 
 .testimonials-section .owl-dot.active {
-  background: #B89841;
+  background: #33ACFF;
 }
  
 /*---------------------------------------------------- 
@@ -2216,7 +2232,7 @@ footer .foot_contact_wid li a:hover {
   top: 0;
   height: 45px;
   border: none;
-  background: #B89841;
+  background: #33ACFF;
   color: #fff;
   font-size: 0;
   padding: 10px 25px;
@@ -2287,7 +2303,7 @@ footer .foot_contact_wid li a:hover {
   background-image: url('../images/icon_top.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #B89841;
+  background-color: #33ACFF;
   -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
@@ -2501,7 +2517,7 @@ header {
   text-decoration: inherit;
   color: #c9cccc;
   font-size: 24px;
-  padding-right: ;
+  
      position: absolute;
   top: -3px;
   left: 30px;
@@ -2532,7 +2548,7 @@ header {
 .pager .pagi-big a {
   color: #fff;
   font-weight: 700;
-  background: #B89841;
+  background: #33ACFF;
 }
 
 .pager li a {
@@ -2543,7 +2559,7 @@ header {
   color: #333;
   font-weight: 700;
   padding: 8px 13px;
-  /*! border: 1px solid #B89841; */
+  /*! border: 1px solid #33ACFF; */
   background: #fff;
   font-size: 14px;
 }
@@ -2562,7 +2578,7 @@ header {
 }
 
 .pagination .pager li > a:focus, .pagination .pager li > a:hover {
-  background-color: #B89841;
+  background-color: #33ACFF;
   color: #fff;
 }
 /* -- Widget Area */
@@ -2768,8 +2784,8 @@ header {
 .widget-tags > a:hover {
   color: #fff;
   transition: all 1s ease 0s;
-  border-color: #B89841;
-  background: #B89841;
+  border-color: #33ACFF;
+  background: #33ACFF;
 }
 
 .widget-tags > a {
@@ -2908,22 +2924,22 @@ header {
 }
 
 .form-control:focus {
-  border-bottom: 1px solid #B89841;
+  border-bottom: 1px solid #33ACFF;
   box-shadow: none;
 }
 
 #contactForm .submit-button:hover {
   background: transparent;
   color: #333;
-  border: 1px solid #B89841;
+  border: 1px solid #33ACFF;
 }
 
 #contactForm .submit-button {
   color: #FFF;
-  background: #B89841;
+  background: #33ACFF;
   margin-top: 15px !important;
   padding: 14px 30px;
-  border: 1px solid #B89841;
+  border: 1px solid #33ACFF;
   text-align: left;
   margin-left: 15px;
   border-radius: 30px;
@@ -2950,7 +2966,7 @@ header {
 }
 
 .post-option .prev-post:hover, .post-option .next-post:hover {
-  color: #B89841;
+  color: #33ACFF;
 }
 
 .post-option .prev-post::after {
@@ -2958,7 +2974,7 @@ header {
   content: "";
   width: 66px;
   height: 2px;
-  background: #B89841;
+  background: #33ACFF;
   left: 18px;
   bottom: -5px;
 }
@@ -2968,7 +2984,7 @@ header {
   content: "";
   width: 68px;
   height: 2px;
-  background: #B89841;
+  background: #33ACFF;
   left: 1px;
   bottom: -5px;
 }
@@ -2981,7 +2997,7 @@ header {
 
 .post-option .middle-icon a {
   position: relative;
-  color: #B89841;
+  color: #33ACFF;
   font-size: 27px;
   display: inline-block;
   transition: all 0.3s ease;
@@ -3066,7 +3082,7 @@ header {
   border-color: #e7e7e7;
   border-width: medium medium 1px;
   border-style: none none solid;
-  border-color: -moz-use-text-color -moz-use-text-color #B89841;
+  border-color: -moz-use-text-color -moz-use-text-color #33ACFF;
   -moz-border-top-colors: none;
   -moz-border-right-colors: none;
   -moz-border-bottom-colors: none;
@@ -3125,7 +3141,7 @@ header {
   margin: -10px 0px 0px 0px;
   color: #fff;
   border: 1px solid transparent;
-  background: #B89841;
+  background: #33ACFF;
   text-transform: uppercase;
 }
 
@@ -3173,7 +3189,7 @@ header {
   width: 40px;
   height: 40px;
   line-height: 36px;
-  background: #B89841;
+  background: #33ACFF;
   background-image: none;
   bottom: 0%;
   box-shadow: none;
@@ -3281,8 +3297,8 @@ header {
 
 .port_single_share .social-icons > li > a i {
   font-size: 14px;
-  background: #B89841;
-  border: 1px solid #B89841;
+  background: #33ACFF;
+  border: 1px solid #33ACFF;
   color: #fff;
   width: 30px;
   height: 30px;
@@ -3292,8 +3308,8 @@ header {
 
 .port_single_share .social-icons > li > a i:hover {
   background: transparent;
-  border: 1px solid #B89841;
-  color: #B89841;
+  border: 1px solid #33ACFF;
+  color: #33ACFF;
 }
 
 .work-section.related_work .col-sm-3 {
@@ -3394,7 +3410,7 @@ header {
 }
 
 .single_service_category .active {
-    background: #B89841;
+    background: #33ACFF;
     color: #fff;
     border-bottom: 1px solid transparent;
 }
@@ -3470,7 +3486,7 @@ header {
     position: absolute;
     top: 0px;
     margin-top: 6px;
-    color: #B89841;
+    color: #33ACFF;
 }
 .header_top_v2 .header_wrp_2 li span {
 
@@ -3539,7 +3555,7 @@ header {
     top: 0px;
     transition: all 0.3s ease 0s;
     width: 40px;
-    background: #B89841;
+    background: #33ACFF;
 }
 
 .navigation_2 #navigation > ul > li > a {
@@ -3562,7 +3578,7 @@ header {
   text-transform: capitalize;
 }
 .slides_wrapper_v2 .slider_home h2 span {
-    color: #B89841;
+    color: #33ACFF;
 }
 .slides_wrapper_v2 .slider_home p {
     font-size: 16px;
@@ -3574,11 +3590,11 @@ header {
 }
 
 .slides_wrapper_v2 .slide_bg_1 {
-  background: #f0f0f0 url("../images/slider3.jpg") no-repeat;
+  background: #f0f0f0 url("../images/slider3.png") no-repeat;
 }
 
 .slides_wrapper_v2 .slide_bg_2 {
-  background: #f0f0f0 url("../images/slider4.jpg") no-repeat;
+  background: #f0f0f0 url("../images/slider4.png") no-repeat;
 }
 
 .slides_wrapper_v2 .slider_btn a {
@@ -3619,7 +3635,7 @@ header {
     margin-left: 0px;
 }
 .about_sec_2 .contact-form {
-    border: 1px solid #B89841;
+    border: 1px solid #33ACFF;
 }
 /*===================================== 
    Why choos section two
@@ -3654,7 +3670,7 @@ header {
 .why_choose_two .chooseus-content .chooseus_icon {
     color: #fff;
     font-size: 33px;
-    background: #B89841;
+    background: #33ACFF;
     border-radius: 50%;
     padding: 14px 14px;
     box-shadow: 6px 2px 13px rgba(0, 0, 0, 0.1);
@@ -3716,7 +3732,7 @@ header {
   top: 0;
   margin-top: 33px;
   margin-left: 30px;
-  color: #B89841;
+  color: #33ACFF;
 }
 .service_box_tw h3 {
   margin-bottom: -7px;
@@ -3730,7 +3746,7 @@ header {
     bottom: -2px;
     height: 3px;
     width: 0px;
-    background-color: #B89841;
+    background-color: #33ACFF;
     transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
@@ -3744,7 +3760,7 @@ header {
     bottom: -2px;
     height: 3px;
     width: 0px;
-    background-color: #B89841;
+    background-color: #33ACFF;
     transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -webkit-transition: all 500ms ease;

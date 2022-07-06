@@ -50,7 +50,11 @@
                 </div>
                 <div class="col-md-6">
                     <div id="map" class="map-container">
-                        <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=ippb%20bonamoussadi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+                        <div class="mapouter">
+                        <div class="gmap_canvas">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.6448145933964!2d9.739720114504223!3d4.092500239669598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610fdad44fd517%3A0x290342b61ca0ed12!2sVecteur%2B%20Technologies!5e0!3m2!1sfr!2scm!4v1657061383090!5m2!1sfr!2scm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="500"></iframe>
+                       </div>
+                    </div>
                     </div>
                 </div>   
             </div>

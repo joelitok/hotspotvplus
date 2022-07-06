@@ -10,15 +10,15 @@
                     <div class="social-nav">
                         <ul class="header_socil list-inline pull-left">
                             <li>
-                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href="{{URL::to('/contactez')}}"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{{URL::to('/contactez')}}">
                                         <i class="fa fa-twitter"></i>
-                                    </a>
+                                </a>
                             </li>
                             <li>
-                                <a href=""><i class="fa fa-pinterest"></i></a>
+                                <a href="https://wa.me/237652597112"><i class="fa fa-whatsapp"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -58,7 +58,7 @@
             <div class="col-md-12">
                 
                 <div class="repire_logo">
-                    <a href="#"><img src="{{asset('frontend/images/logo.jpg')}}"  alt="Riamend"></a>
+                    <a href="{{URL::to('/')}}"><img src="{{asset('frontend/images/logo.jpg')}}"  alt="Riamend"></a>
                 
                 </div>
                 <div id="navigation">
@@ -66,13 +66,15 @@
                         <li><a class="active" href="{{URL::to('/')}}">Accueil</a>
                         </li>
                       
-                        <li><a href="{{URL::to('/rent-a-wifi')}}" style="font-size:17px; color:rebeccapurple;font-weight: bold;">Louer un Mifi</a>
+                        <li><a class="btn btn-secondary" href="{{URL::to('/rent-a-wifi')}}" style="font-size:17px; color:rebeccapurple;font-weight: bold;">Louer un Mifi</a>
                         </li>
-                        <li class="has-sub"><a href="{{URL::to('/solutions')}}" title="page">Solutions Pro</a>
+                        <li class="has-sub"><a href="{{URL::to('/solution-pro')}}" title="page">Solutions Pro</a>
                             <ul>
-                                <li><a href="#" title="Gallery">Wifi pour conference</a>
+                                <li><a href="{{URL::to('/mifi-conference')}}" title="Gallery">Wifi pour conference</a>
                                 </li>
-                                <li><a href="#" title="Gallery">Wifi pour entreprise</a>
+                                <li><a href="{{URL::to('/internet-entreprise')}}" title="Gallery">Internet pour entreprise</a>
+                                </li>
+                                <li><a href="{{URL::to('/internet-domicile')}}" title="Gallery">Internet pour domicile</a>
                                 </li>
                                 <li><a href="{{URL::to('/services')}}" title="Services">Services</a></li>
                                 

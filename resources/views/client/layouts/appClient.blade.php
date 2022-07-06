@@ -9,7 +9,7 @@
 
 <head>
     <!-- TITLE OF SITE -->
-    <title>hotspotv+ </title>
+    <title>237services </title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="{{asset('frontend/images/favicon.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('frontend/images/logo1.jpg')}}">
 
     <!-- CSS Begins
 ================================================== -->
@@ -41,13 +41,16 @@
     <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/responsive.css')}}" rel="stylesheet">
 
+
+
+
     <!--[if IE]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
     {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
- 
+     
 </head>
 
 <body>
@@ -72,25 +75,14 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Scripts
 ========================================-->
 <!-- jquery -->
+
+
+
+<!-- jquery -->
 <script src="{{asset('frontend/js/jquery-1.12.4.min.js')}}"></script>
-<!-- plugins -->
 <script src="{{asset('frontend/js/plugins.js')}}"></script>
 <!-- Bootstrap -->
 <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>

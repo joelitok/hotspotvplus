@@ -44,7 +44,7 @@ class ServiceController extends Controller
             $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
 
             //$path = $request->file('service_image')->storeAs('public/service_images', $fileNameToStore);
-            $path = $request->file('service_image')->move(public_path() . '/service_images', $fileNameToStore);
+            $path = $request->file('service_image')->move('service_images', $fileNameToStore);
         } else {
             $fileNameToStore = 'noimage.jpg';
         }
@@ -86,7 +86,7 @@ class ServiceController extends Controller
     {
         $service = Service::find($id);
         if ($service->service_image != 'noimage.jpg') {
-            Storage::delete('public/service_images/' . $service->image);
+            Storage::delete('service_images/' . $service->image);
         }
 
         $service->delete();
@@ -116,7 +116,7 @@ class ServiceController extends Controller
             [
                 'service_title' => 'required',
                 'service_descripton' => 'required',
-                'service_image' => 'image| nullable|max:19990'
+                'service_image' => 'image|nullable|max:19990'
             ]
         );
 
@@ -135,12 +135,12 @@ class ServiceController extends Controller
             $fileNameToStore = $fileName . '_' . time() . '' . $extension;
 
             $path = $request->file('service_image')->move(
-                public_path() . '/service_images',
+                'service_images',
                 $fileNameToStore
             );
 
-            if ($service->service_image != 'noimage.jpg') {
-                Storage::delete('public/service_images/' . $service->image);
+            if ($service->service_image!='noimage.jpg') {
+                Storage::delete('service_images/' . $service->image);
             }
             $service->service_image = $fileNameToStore;
         }

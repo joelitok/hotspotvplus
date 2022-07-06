@@ -43,7 +43,7 @@ class SliderController extends Controller
                $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
    
                //$path = $request->file('slider_image')->storeAs('public/slider_images', $fileNameToStore);
-               $path = $request->file('slider_image')->move(public_path() . '/slider_images', $fileNameToStore);
+               $path = $request->file('slider_image')->move('slider_images', $fileNameToStore);
            } else {
                $fileNameToStore = 'noimage.jpg';
            }
@@ -83,7 +83,7 @@ class SliderController extends Controller
        {
            $slider = Slider::find($id);
            if ($slider->slider_image != 'noimage.jpg') {
-               Storage::delete('public/slider_images/' . $slider->image);
+               Storage::delete('slider_images/' . $slider->image);
            }
    
            $slider->delete();
@@ -131,12 +131,12 @@ class SliderController extends Controller
                $fileNameToStore = $fileName . '_' . time() . '' . $extension;
    
                $path = $request->file('slider_image')->move(
-                   public_path() . '/slider_images',
+                   'slider_images',
                    $fileNameToStore
                );
    
                if ($slider->slider_image != 'noimage.jpg') {
-                   Storage::delete('public/slider_images/' . $slider->image);
+                   Storage::delete('slider_images/' . $slider->image);
                }
                $slider->slider_image = $fileNameToStore;
            }

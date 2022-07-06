@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\Mifi;
+
 use Storage;
 
 class OrderController extends Controller
@@ -13,8 +15,11 @@ class OrderController extends Controller
  //liste des orders
  public function orders()
  {
-     $orders = Order::orderBy('id', 'DESC')->paginate(5);
-     return view('admin.template.orders.orders')->with('orders', $orders);
+     $orders = Order::orderBy('id', 'DESC')->paginate(5 );
+     $mifi_not_attributed = Mifi::orderBy('id','DESC')->where('id_user_attributed_mifi', 0)->get();
+     $mifi_attributed = Mifi::orderBy('id','DESC')->where('id_user_attributed_mifi','<>',0)->get();
+     return view('admin.template.orders.orders')->with('orders', $orders)
+     ->with('mifi_not_attributed', $mifi_not_attributed)->with('mifi_attributed', $mifi_attributed);
  }
 
  public function disable_order($id)

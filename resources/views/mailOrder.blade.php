@@ -349,18 +349,19 @@
                <tr>
                 <td class="wrapper">
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                      <tr> <td style="text-align: center;font-weight: bolder;"> M/Mme :  {{ $order_name }} </td> </tr>
-                      <!-- START MAIN CONTENT AREA -->
+                      <tr> <td style="text-align: center;font-weight: bolder;"> Bonjour Mr/Mme:  {{ $order_name }} </td> </tr>
+                      <tr> <td>Nous vous remercions de l'interet porter à notre entreprise. votre commande comporte:  </td> </tr>
                        <tr>  <td>  Téléphone : {{ $order_phone }}   </td> </tr>
                        <tr>  <td> Email : {{ $order_email }}  </td> </tr>
                        <tr>  <td>  Ville: {{ $order_city }}   </td> </tr>
-                       <tr>  <td>  pour le : {{ $dateStart }}  au {{ $dateEnd }}  </td> </tr>
+                       <tr>  <td>  pour le : {{ $period }} </td> </tr>
 
                     <tr><td> 
                         <br> 
-                <p>commande: {{ ucfirst($order_forfait_name) }} </p> </td></tr>
+                <p>Forfait Choisi: {{ ucfirst($order_forfait_name) }} </p> </td></tr>
                     
                     <tr>
+                 
                       <td>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
@@ -369,7 +370,7 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td> <a href="#" target="_blank"> Site  </a> </td>
+                                      <td> <a href="https://237services.com" target="_blank"> 237services </a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -378,7 +379,8 @@
                           </tbody>
                         </table>
                         
-                        <p style="text-align: justify;font-weight: bolder; font-family: cursive;">Tous droit reservé </p>
+                        <p style="text-align: justify;font-weight: bolder; font-family: cursive;"> Nous vous contacterons pour plus d'information. <br>
+                          Cordialement. </p>
                       </td>
                     </tr>
                   </table>

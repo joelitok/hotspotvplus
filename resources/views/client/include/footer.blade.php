@@ -97,12 +97,21 @@ aria-hidden="true">
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-11">
-                                <input type="password" 
-                                    name="password" id="password" class="form-control"/>  
+                                <input type="password"  placeholder="Mots de passe"
+                                    name="password" id="password" class="form-control" required/>  
                             </div>
                             <div class="col-lg-1">
                                 <span style="color: black" class="fa fa-eye-slash" 
                                     id="togglePassword"></span>  
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="checkbox" >
+                                    <label>
+                                        <a href="{{ url('/admin/forget-password') }}" style="color: blue">mots de passe oublier</a>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -159,7 +168,7 @@ aria-hidden="true">
                             <h6><a href="#">Adresse : Carrefour IPPB BONAMOUSSADI DOUALA</a></h6>
                         </li>
                         <li>
-                            <h6><a href="#">Tel : (+237) 6 75 75 94 82</a> <img src="{{asset('frontend/images/whatsapp.png')}}"  height="30px" width="30px"></h6>
+                            <h6><a href="#">Tel : (+237) 6 75 75 94 82</a> <img src="{{asset('frontend/images/whatsapp1.png')}}"  height="30px" width="50px"></h6>
                         </li>
                         <li>
                             <h6><a href="#">Tel : (+237) 6 55 83 88 84</a></h6>

@@ -150,8 +150,8 @@
 
                                                 <tr>
                                                     <td>{{ $inc }}</td>
-                                                    <td><img
-                                                            src="/service_images/{{$service->service_image}}">
+                                                    <td><img 
+                                                            src="{{asset('service_images/'.$service->service_image)}}">
                                                     </td>
                                                     <td>{{ $service->service_title }}</td>
                                                     <td>{{ $service->created_at->format('d/m/Y   H:i:s') }}</td>

@@ -30,8 +30,47 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 col-xs-12">
+                                   
                                     <h5>Votre pocket wifi</h5>
-                                    <h2> Restez connecter partout au cameroun 24h/24 </h2>
+                                    <h2> Restez connecter partout au cameroun pendant votre séjour </h2>
+                                    <p> <i class="fa fa-hand-o-right" aria-hidden="true"></i> Tel : (+237) 6 55 83 88 84 </p>
+                                    <div class="slider_btn">
+                                        <a href="{{URL::to('/rent-a-wifi')}}" class="more-link slider_btn_one">louer un wifi</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider slide_bg_3">
+                <div class="slider_item_tb">
+                    <div class="slider_item_tbcell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="slider_btn">
+                                        <a href="{{URL::to('/rent-a-wifi')}}" class="more-link slider_btn_one">louer un wifi</a>
+                                    </div>
+                                    <h5>Votre pocket wifi</h5>
+                                    <h2> Restez connecter partout au cameroun pendant votre séjour </h2>
+                                    <p> <i class="fa fa-hand-o-right" aria-hidden="true"></i> Tel : (+237) 6 55 83 88 84 </p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider slide_bg_4">
+                <div class="slider_item_tb">
+                    <div class="slider_item_tbcell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                   
+                                    <h5>Votre pocket wifi</h5>
+                                    <h2> Restez connecter partout au cameroun pendant votre séjour </h2>
                                     <p> <i class="fa fa-hand-o-right" aria-hidden="true"></i> Tel : (+237) 6 55 83 88 84 </p>
                                     <div class="slider_btn">
                                         <a href="{{URL::to('/rent-a-wifi')}}" class="more-link slider_btn_one">louer un wifi</a>
@@ -53,42 +92,6 @@
 
 
 
-<!-- Start: About  Section 
-==================================================-->
-<section class="about_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="abut_title">
-                    <h2 style="text-align: center">  
-                         Services Informatiques 
-                        </h2>
-                        <p style="text-align: center"> Offre de service</p>
-                     <div class="about_list_itm">
-                        <ul>
-                            <li>Vous êtes une entreprise, une association. </li>
-                            <li>Vous ne disposez pas d’un service informatique interne. </li>
-                            <li>Vous en offrir un, est coûteux ! </li>
-                            <li>Alors externalisez votre service informatique ! </li>
-                            <li>Confiez  la  résolution  de  vos  problèmes  informatique à  vecteur+ technologies </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="about_box">
-                    <img src="{{asset('frontend/images/about.jpg')}}" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- End: row-->
-    </div>
-    <!-- End: container-->
-</section>
-<!--  End: About Section
-==================================================-->
-
-
 
 
 
@@ -101,8 +104,9 @@
     <div class="container">
         <!-- Start: Heading -->
         <div class="base-header">
-            <h2>Notre plan Spécial </h2>
-            <p>Internet est un outil de communication incontournable pour les entreprises aujourd’hui ! Ce pendant nos meilleurs offres sont les suivants :</p>
+            <h2>Nos plans Spéciaux </h2>
+            <p>Bénéficiez de notre plan spécial: <br>
+            Versez un caution totalement remboursable et choisissez un plan pour restez connecter 24h/7 partout au Cameroun</p>
         </div>
         <!-- End:  heading -->
         <div class="row">
@@ -127,8 +131,11 @@
                 <!-- End: pricing-box 1 -->
             </div>
             @empty
-            <div style="text-align: center">
-                <H1> Aucun tarrif disponible</H1>
+            <div class="col-md-12 col-xs-12 justify-content-center">
+                <p style="text-align: center"> 
+                    <H1> Aucun tarrif disponible</H1>
+                </p>
+                
             </div>
             @endforelse
            
@@ -207,6 +214,13 @@
 </div>
 <!--   End:Client Section
 ==================================================-->
-
-
+<!-- plugins -->
+<script type="text/javascript">
+    var vsid = "kc24382a0c1c9b4";
+    (function() { 
+    var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+     vsjs.src = 'https://www.leadchatbot.com/vsa/chat.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+    })();
+</script>
 @endsection
